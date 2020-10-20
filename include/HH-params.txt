@@ -1,0 +1,11 @@
+	CA3 presynaptic	CA1 post synaptic
+gNa	   100	100
+gK(DR)  	8	    12
+gK(A)	  17	    17
+gK(AHP)	 7	     2.7
+gK(C )	 36.6	  33
+gKtotal	68.6	  64.7
+gLeak	   0.33  	0.33
+VNa	    50    	50
+VK 	   -80 	  -80
+Vleak	 -65 	  -65

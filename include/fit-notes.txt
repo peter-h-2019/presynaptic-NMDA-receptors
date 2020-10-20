@@ -1,0 +1,37 @@
+   int hill_fit=0;
+   
+   if (hill_fit == 1)
+   {
+       if(AP5 == 1) {
+          ex.AP5_exp=1;
+          ex.RY_exp =0;
+          printf("\n mode ACSF, AP5 \n");
+       } 
+       else {
+          ex.AP5_exp=0;
+          ex.RY_exp =1;
+          printf("\n mode ACSF, RyR \n");
+       }
+
+       printf("Running sim using new optimal\n");
+       mode=0;
+       ex = buildTrain(isi, SEC, TRIALS, deltaT, mode, astro);
+       
+//     ex.n1a = optimal.n1a;
+       ex.K1 = optimal.K1;
+       
+       ex.n2 = optimal.n2;
+       ex.K2 = optimal.K2;
+              
+       if(AP5 == 1) {
+          ex.AP5_exp=1;
+          ex.RY_exp =0;
+          printf("\n optimal sim ACSF, AP5 \n");
+       } 
+       else {
+          ex.AP5_exp=0;
+          ex.RY_exp =1;
+          printf("\n optimal sim ACSF, RyR \n");
+       }
+       sim(ex);
+   }
